@@ -66,15 +66,10 @@ function randomTo100() {
   // Set the grade of a random student to 100.
   
   outputEl.innerHTML = "Random grade to 100";
-  let randomgrade = Math.round(Math.random() * 10)
-  let number = grades.length
-  for (x = 0; x < number; x++){
-      if (randomgrade === x){
-          grades[x] = 100
-      }
-    
-  }
-  
+  length = grades.length
+  let randomgrade = Math.round(Math.random() * (length - 1))
+  grades[randomgrade] = 100
+  console.log(randomgrade)
 }
 
 function addRandomGrade() {
